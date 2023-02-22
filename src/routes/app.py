@@ -1,6 +1,6 @@
 """Inside Quart app"""
 from quart import Quart
-from hello.services import response as res
+from src.services import response as res
 
 app = Quart(__name__)
 
