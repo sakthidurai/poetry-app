@@ -5,7 +5,7 @@ from src.services import response as res
 app = Quart(__name__)
 
 
-@app.get("/echo")
+@app.get("/helloworld")
 async def echo():
     """Inside echo method"""
     return res.get_response()
