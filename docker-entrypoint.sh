@@ -8,7 +8,8 @@ echo "python path is" $PYTHONPATH
 
 . .venv/bin/activate  && which python
 
-python src/routes/app.py
+#run the app in prod mode
+hypercorn src/routes/app.py:app
 
 exec "$@"
 #exec gunicorn --bind 0.0.0.0:5000 --forwarded-allow-ips='*' wsgi:app
